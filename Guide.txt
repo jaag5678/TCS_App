@@ -1,0 +1,14 @@
+This simple program takes user's input of a DFA (Which is in tabular format) and stores the DFA 
+Rules so far for Defining a DFA :
+	-> First mention no of states (state name so far can be only one char)
+	-> Next Mention no of variables (So far assumed to be nos)
+	-> Next mention the start state
+	-> Next start filling the info of the DFA int a tabular form
+		->Press Enter after fillling every row
+	-> The program will detect the next state for which transitions to be filled in (LAzy eval)
+	-> ONce done mention the no of final states followed by wrting the final states seperated by spaces
+
+	->NExt you can give a string Input to test whether it exists in the language defined above
+	-> Your Ans will be shown by:
+		-> 0 - Meaning it doesnt exist
+		-> 1 - Meaning it exists
