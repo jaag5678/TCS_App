@@ -1,10 +1,29 @@
 //Making a Data Strcuture for A Deterministi Finite Automata
-//NOTE NOW Redundant but still can be viewed as a leaaring exps
-#include"Importante.h"
-#include"DFA.h"
+#include<iostream>
+#include<string.h>
 
 using namespace std;
 
+typedef struct l_table {
+	char **M; //Matrix Representation
+	int S;
+	int V;
+	char *St; //For all states
+	char *F; //For final state
+	char Start;
+}l_table;
+
+
+class DFA {
+
+	l_table *L;
+
+public:
+	DFA(int S, int V);
+	void Input();
+	bool Str_Inp(char *);
+	bool St_Exist(char, int );
+};
 
 DFA::DFA(int S, int V) {
 	L = new l_table;
