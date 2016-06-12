@@ -18,8 +18,19 @@
     <Text Include="Guide.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DFA.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Importante.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

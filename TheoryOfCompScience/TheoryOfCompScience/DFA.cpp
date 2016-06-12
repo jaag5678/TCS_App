@@ -1,29 +1,10 @@
 //Making a Data Strcuture for A Deterministi Finite Automata
-#include<iostream>
-#include<string.h>
+//NOTE NOW Redundant but still can be viewed as a leaaring exps
+#include"Importante.h"
+#include"DFA.h"
 
 using namespace std;
 
-typedef struct l_table {
-	char **M; //Matrix Representation
-	int S;
-	int V;
-	char *St; //For all states
-	char *F; //For final state
-	char Start;
-}l_table;
-
-
-class DFA {
-
-	l_table *L;
-
-public:
-	DFA(int S, int V);
-	void Input();
-	bool Str_Inp(char *);
-	bool St_Exist(char, int );
-};
 
 DFA::DFA(int S, int V) {
 	L = new l_table;
@@ -39,7 +20,7 @@ DFA::DFA(int S, int V) {
 void DFA::Input() {
 	cout << "Enter the transtions for each state starting from start state" << endl;
 
-	char g;
+	//char g;
 	int x, y;
 	int i, j, k, cnt;
 
@@ -137,50 +118,3 @@ bool DFA::St_Exist(char c, int k) {
 	} while (l < k);
 	return false;
 }
-
-int main() {
-
-	int S, V;
-	char *STR = NULL;
-
-	cout << "No of states " << endl;
-	cin >> S;
-
-	cout << "No of variables" << endl;
-	cin >> V;
-
-	DFA a(S, V);
-
-	a.Input();
-
-	while (1) {
-		char c;
-		int off = 0, cnt = 1;
-		STR = new char[256];
-		cout << "Give a string to test" << endl;
-
-		//Shantanu HEre
-		while ((c = getchar()) != (EOF || '\n')) {
-			c = STR[off++];
-			if (!(off % 256))
-				STR = (char *)realloc(STR, sizeof(char) * 256 * (++cnt));
-		}
-		int t = a.Str_Inp(STR);
-		cout << "T" << t << endl;
-
-		cout << "Do you want to test any other string?" << endl;
-		cin >> S;
-
-		if (S == 1)
-			free(STR);
-		else
-			break;
-	}
-	
-
-	getchar();
-	getchar();
-
-	return 0;
-}
-
