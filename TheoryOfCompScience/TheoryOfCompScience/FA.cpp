@@ -189,7 +189,11 @@ char * FA::Fetch_States(int V, char *State) {
 	//str[tot] = '\0';
 	while (strlen(State) - ++l) {
 		//str[l] = L->N[get_no(State[l])][V];
-		strcpy(str, L->N[get_no(State[l])][V]);
+		if (!l)
+			strcpy(str, L->N[get_no(State[l])][V]);
+		else
+			strcat(str, L->N[get_no(State[l])][V]);
+		cout << str << endl;;
 	}
 	str[tot] = '\0';
 	return str;
