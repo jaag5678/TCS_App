@@ -14,11 +14,13 @@ public:
     int variables;
     vector <string> state_names;
     vector <string> variable_names;
+    vector <int> final_state_indices;
     int **array = NULL;
     void build_array();
     void fill_table();
     void mappy(string state, int state_off, int var_off);
     void display_table();
+    void display_table_indices();
 
     void declare_error(int i);
 };

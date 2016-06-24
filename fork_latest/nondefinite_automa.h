@@ -7,6 +7,8 @@
 
 #include <vector>
 #include <string>
+#include "t_table.h"
+#include "finite_automa.h"
 
 using namespace std;
 
@@ -32,11 +34,10 @@ class nondefinite_automa {
         t_table2 transitions;
         string start_state;
         vector <string> final_states;
-        vector <string> state_names;
-        vector <string> variable_names;
-        int states;
-        int variables;
-
+    void init();
+    void passandtest(string user_input);
+    finite_automa not_lazy_evaluate();
+    int getoffset(char given);
 };
 
 

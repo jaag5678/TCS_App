@@ -4,8 +4,6 @@
 
 #include "t_table.h"
 #include <iostream>
-#include <vector>
-#include <string>
 
 using namespace std;
 void t_table::build_array() {
@@ -92,4 +90,21 @@ void t_table::declare_error(int i) {
                         "No transition variable matches with input letter from given string.\n"};
     cout<<errors[i];
 }
+
+void t_table::display_table_indices() {
+                    //display feature
+        int i, j;
+        cout<<"STATE\t\t";
+        for(i = 0; i < variables; i++)
+            cout<<variable_names[i]<<"\t\t";
+        cout<<endl;
+        for(i = 0; i < states; i++) {
+            cout<<state_names[i]<<"\t\t";
+            for(j = 0; j < variables; j++)
+                cout<<array[i][j]<<"\t\t";
+            cout<<endl;
+        }
+}
+
+
 

@@ -8,14 +8,19 @@
 using namespace std;
 
 int main() {
-    finite_automa FA1;
-    FA1.init();
-    FA1.passandtest("1aa1aa11a1a"); //example, strings that end with 1a
+   // finite_automa FA1;
+   // FA1.init();
+   // FA1.passandtest("1aa1aa11a1a"); //example, strings that end with 1a
 
-    t_table2 example;
-    example.build_array();
-    example.fill_table();
-    example.display_table();
-    //dont use NFA functions yet, I am writing those. Will push soon. Play with FA and t_table2/t_table meanwhile.
+    //t_table2 example;
+    //example.build_array();
+    //example.fill_table();
+    //example.display_table();
+
+    nondefinite_automa rial;
+    rial.init();
+    finite_automa y = rial.not_lazy_evaluate();
+    y.transitions.display_table_indices();
+
     return 0;
 }

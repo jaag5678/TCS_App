@@ -22,6 +22,8 @@ public:
     void passandtest(string input);
     //we will try string and substring transitions later but they are not reg expressions. They be cfls
     int getoffset(char given);
+
+
 };
 
 

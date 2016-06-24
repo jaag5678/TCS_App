@@ -1,12 +1,9 @@
-//
+    //
 // Created by shantanu on 19/6/16.
 //
 
 #include "finite_automa.h"
-#include "t_table.h"
 #include <iostream>
-#include <vector>
-#include <string>
 
 using namespace std;
 
